@@ -2,6 +2,7 @@
 using namespace std;
 
 // <-- ADD YOUR FUNCTION PROTOTYPE HERE
+void Sort(int &red, int &blue, int &green);
 
 int main()
 {
@@ -13,7 +14,7 @@ int main()
 
 
   // <-- ADD YOUR FUNCTION CALL HERE
-
+  Sort(red, blue, green);
 
   //DO NOT CHANGE WITHIN THIS AREA...
   cout<<"Rearranged....\n";
@@ -23,3 +24,25 @@ int main()
 }
 
 // <-- ADD YOUR FUNCTION DEFINITON HERE
+void Sort(int &red, int &green, int &blue)
+{
+    if (red < blue) 
+    {
+        int temp = red;
+        red = blue;
+        blue = temp;
+    }
+    if (red < green) 
+    {
+        int temp = red;
+        red = green;
+        green = temp;
+    }
+    if (blue < green) 
+    {
+        int temp = blue;
+        blue = green;
+        green = temp;
+    }
+    return;
+}
